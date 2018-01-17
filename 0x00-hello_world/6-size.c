@@ -5,9 +5,16 @@
 */
 int main(void)
 {
-	printf("Size of a char: %lu byte(s).\n", sizeof(char));
-	printf("Size of an int: %lu bytes(s).\n", sizeof(int));
-	printf("Size of a long int: %lu byte(s).\n", sizeof(long int));
-	printf("Size of a long long int: %lu byte(s).\n", sizeof(long long int));
-	printf("Size of a float: %lu byte(s).\n", sizeof(float));
+int i;
+int variableSizes[5] = {sizeof(char), sizeof(int), sizeof(long int), sizeof(long long int), sizeof(float)};
+char *variableNames[5] = {"char", "int", "long int", "long long int", "float"};
+
+for (i = 0; i < 5; i++)
+{
+	if (i == 1)
+		printf("Size of an %s: %d byte(s)\n", variableNames[i], variableSizes[i]);
+	else
+		printf("Size of a %s: %d bytes\n", variableNames[i], variableSizes[i]);
+}
+return (0);
 }
