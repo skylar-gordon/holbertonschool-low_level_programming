@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -13,9 +12,9 @@ int main(void)
 
 	while (i < 9)
 	{
-		putchar(betty[i]);
+		_putchar(betty[i]);
 		i++;
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
