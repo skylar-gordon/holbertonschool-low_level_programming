@@ -10,7 +10,32 @@
 
 int _putchar(char c)
 {
- 	return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 
-void print_alphabet(void);
+void print_alphabet(void)
+{
+	int i = 97;
+	while (i < 123)
+	{
+		_putchar(i);
+		i++;
+	}
+	_putchar('\n');
+}
+
+void print_alphabet_x10(void)
+{
+	int i = 0;
+	while (i < 10)
+	{
+		int j = 97;
+		while (j < 123)
+		{
+			_putchar(j);
+			j++;
+		}
+		_putchar('\n');
+		i++;
+	}
+}
