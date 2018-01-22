@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <ctype.h>
 
 /**
 * _putchar - writes the character c into stdout
@@ -38,4 +39,12 @@ void print_alphabet_x10(void)
 		_putchar('\n');
 		i++;
 	}
+}
+
+int _islower(int c)
+{
+	if (tolower(c) == c)
+		return (1);
+	else
+		return (0);
 }
