@@ -1,7 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 #include <string.h>
-#include <stdio.h>
+#include "putchar.h"
 
 /**
 * reset_to_98 - sets a provided integer to the value 98.
@@ -50,6 +50,15 @@ void _puts(char *str)
 	int i;
 	for (i = 0; i < _strlen(str); i++)
 		_putchar(str[i]);
+	_putchar('\n');
+}
+
+void print_rev(char *s)
+{
+	int j;
+	for (j = _strlen(s) - 1; j >= 0; j--)
+		_putchar(s[j]);
+	_putchar('\n');
 }
 
 #endif /* HOLBERTON_H */
