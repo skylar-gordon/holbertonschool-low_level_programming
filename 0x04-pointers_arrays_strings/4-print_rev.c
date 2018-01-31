@@ -1,3 +1,5 @@
+#include "holberton.h"
+
 /**
 * print_rev - Prints the reverse of a string.
 * @s: The string in question.
@@ -7,14 +9,13 @@
 void print_rev(char *s)
 {
 	int i;
-	int j;
 
 	i = 0;
 	while (s[i] != '\0')
 		i++;
-	j = i;
-	while (j >= 0)
-		_putchar(s[j]);
-		j--;
+
+	while (i >= 0)
+		_putchar(s[i]);
+		i--;
 	_putchar('\n');
 }
