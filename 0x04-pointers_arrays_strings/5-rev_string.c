@@ -1,4 +1,5 @@
 #include <string.h>
+#include "putchar.h"
 
 /**
 * _strlen - provides string length.
@@ -13,7 +14,6 @@ int _strlen(char *s)
 
 	return length;
 }
-#include "putchar.h"
 
 void _puts(char *str)
 {
@@ -31,4 +31,16 @@ void print_rev(char *s)
 	for (j = _strlen(s) - 1; j >= 0; j--)
 		_putchar(s[j]);
 	_putchar('\n');
+}
+
+void rev_string(char *s)
+{
+	int letter;
+	int revlet;
+	char thearray[30];
+
+	for (letter = _strlen(s) - 1; letter >= 0; letter--)
+		for (revlet = 0; revlet < _strlen(s); revlet++)
+			thearray[revlet] = s[letter];
+	strcpy(s, thearray);
 }

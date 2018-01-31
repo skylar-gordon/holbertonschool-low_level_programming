@@ -1,77 +1,16 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-#include <string.h>
-#include "putchar.h"
 
-/**
-* reset_to_98 - sets a provided integer to the value 98.
-* @n: the integer variable to change.
-*
-* Return: Void.
-*/
+void reset_to_98(int *n);
 
-void reset_to_98(int *n)
-{
-	*n = 98;
-}
+void swap_int(int *a, int *b);
 
-/**
-* swap_int - swaps the values of two integers.
-* @a: integer 1.
-* @b: integer 2.
-*
-* Return: Void.
-*/
-void swap_int(int *a, int *b)
-{
-	int c;
+int _strlen(char *s);
 
-	c = *a;
-	*a = *b;
-	*b = c;
-}
+void _puts(char *str);
 
-/**
-* _strlen - provides string length.
-* @s: The string in question.
-*
-* Return: length of string.
-*/
+void print_rev(char *s);
 
-int _strlen(char *s)
-{
-	char length = strlen(s);
+void rev_string(char *s);
 
-	return length;
-}
-
-void _puts(char *str)
-{
-	int i;
-
-	for (i = 0; i < _strlen(str); i++)
-		_putchar(str[i]);
-	_putchar('\n');
-}
-
-void print_rev(char *s)
-{
-	int j;
-
-	for (j = _strlen(s) - 1; j >= 0; j--)
-		_putchar(s[j]);
-	_putchar('\n');
-}
-
-void rev_string(char *s)
-{
-	int letter;
-	int revlet;
-	char thearray[30];
-
-	for (letter = _strlen(s) - 1; letter >= 0; letter--)
-		for (revlet = 0; revlet < _strlen(s); revlet++)
-			thearray[revlet] = s[letter];
-	strcpy(s, thearray);
-}
 #endif /* HOLBERTON_H */
