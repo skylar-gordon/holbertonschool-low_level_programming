@@ -1,5 +1,5 @@
-#include "holberton.h"
 #include <stdio.h>
+#include "holberton.h"
 /**
 * print_array - prints the requested integers in the array.
 * @a: The array.
@@ -23,5 +23,5 @@ void print_array(int *a, int n)
 		if (j != i - 1)
 			printf(", ");
 	}
-	putchar('\n');
+	printf("\n");
 }
