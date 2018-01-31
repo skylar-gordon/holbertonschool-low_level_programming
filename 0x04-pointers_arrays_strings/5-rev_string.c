@@ -1,46 +1,20 @@
-#include <string.h>
-#include "putchar.h"
-
+#include "holberton.h"
+#include "2-strlen.c"
 /**
-* _strlen - provides string length.
-* @s: The string in question.
-*
-* Return: length of string.
+* rev_string - reverses a string and assigns it to the string.
+* @s: The string.
+* Return: Void.
 */
-
-int _strlen(char *s)
-{
-	char length = strlen(s);
-
-	return length;
-}
-
-void _puts(char *str)
-{
-	int i;
-
-	for (i = 0; i < _strlen(str); i++)
-		_putchar(str[i]);
-	_putchar('\n');
-}
-
-void print_rev(char *s)
-{
-	int j;
-
-	for (j = _strlen(s) - 1; j >= 0; j--)
-		_putchar(s[j]);
-	_putchar('\n');
-}
-
 void rev_string(char *s)
 {
-	int letter;
-	int revlet;
-	char thearray[30];
+	int i1;
+	int i2;
+	char a;
 
-	for (letter = _strlen(s) - 1; letter >= 0; letter--)
-		for (revlet = 0; revlet < _strlen(s); revlet++)
-			thearray[revlet] = s[letter];
-	strcpy(s, thearray);
+	for (i1 = 0, i2 = _strlen(s) - 1; i1 < i2; i1++, i2--)
+	{
+		a = s[i1];
+		s[i1] = s[i2];
+		s[i2] = a;
+	}
 }
