@@ -1,5 +1,7 @@
 #include <string.h>
+
 /** #include "putchar.h" */
+
 /**
 * _strlen - provides string length.
 * @s: The string in question.
@@ -11,8 +13,14 @@ int _strlen(char *s)
 {
 	char length = strlen(s);
 
-	return length;
+	return (length);
 }
+
+/**
+* _puts - prints the string.
+* @str: The string in question.
+* Return: Void
+*/
 
 void _puts(char *str)
 {
@@ -22,6 +30,12 @@ void _puts(char *str)
 		_putchar(str[i]);
 	_putchar('\n');
 }
+
+/**
+* print_rev - Prints the reverse of a string.
+* @s: The string in question.
+* Return: Void
+*/
 
 void print_rev(char *s)
 {

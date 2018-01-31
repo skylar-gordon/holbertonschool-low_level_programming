@@ -11,8 +11,14 @@ int _strlen(char *s)
 {
 	char length = strlen(s);
 
-	return length;
+	return (length);
 }
+
+/**
+* _puts - prints the string.
+* @str: The string in question.
+* Return: Void
+*/
 
 void _puts(char *str)
 {
