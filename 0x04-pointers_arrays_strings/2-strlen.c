@@ -9,7 +9,8 @@ int _strlen(char *s)
 {
 	unsigned int i;
 
-	while (i <= sizeof(s) + 1)
+	i = 0;
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
