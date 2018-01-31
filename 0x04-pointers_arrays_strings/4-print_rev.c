@@ -1,5 +1,5 @@
 #include <string.h>
-
+/** #include "putchar.h" */
 /**
 * _strlen - provides string length.
 * @s: The string in question.
@@ -13,7 +13,6 @@ int _strlen(char *s)
 
 	return length;
 }
-#include "putchar.h"
 
 void _puts(char *str)
 {
