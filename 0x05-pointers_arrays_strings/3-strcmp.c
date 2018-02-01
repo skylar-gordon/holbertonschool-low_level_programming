@@ -19,9 +19,12 @@ int _strcmp(char *s1, char *s2)
 		len = _strlen(s2);
 
 	i = 0;
-	do {
+	while (i < len)
+	{
 		val = s1[i] - s2[i];
+		if (val != 0)
+			break;
 		i++;
-	} while ((s1[i] == s2[i]) && (i < len));
+	}
 	return (val);
 }
