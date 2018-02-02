@@ -14,7 +14,7 @@ char *cap_string(char *s)
 	for (i = 0; i < _strlen(s); i++)
 	{
 		for (k = 0; k < _strlen(arr); k++)
-			if (s[i - 1] == arr[k])
+			if (s[i - 1] == arr[k] || i == 0)
 				if (s[i] >= 97 && s[i] <= 122)
 					s[i] = s[i] - 32;
 	}
