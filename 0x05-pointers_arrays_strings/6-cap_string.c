@@ -8,14 +8,15 @@
 char *cap_string(char *s)
 {
 	int i;
-	char j;
+	int k;
+	char arr[] = {9, 10, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 
 	for (i = 0; i < _strlen(s); i++)
 	{
-		j = s[i - 1];
-		if (j == 9 || j == 10 || j == 32 || j == 33 || j == 40 || j == 41 || j == 44 || j == 46 || j == 59 || j == 63 || j == 123 || j == 125 || j == 34)
-			if (s[i] >= 97 && s[i] <= 122)
-				s[i] = s[i] - 32;
+		for (k = 0; k < _strlen(arr); k++)
+			if (s[i - 1] == arr[k])
+				if (s[i] >= 97 && s[i] <= 122)
+					s[i] = s[i] - 32;
 	}
 	return (s);
 }
