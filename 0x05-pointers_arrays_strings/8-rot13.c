@@ -1,7 +1,9 @@
 #include "holberton.h"
 #include "strlen.c"
 /**
-
+* rot13 - converts string to ROT13 cipher.
+* @s: String to convert.
+* Return: Converted string.
 */
 char *rot13(char *s)
 {
