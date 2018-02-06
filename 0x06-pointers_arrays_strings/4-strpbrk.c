@@ -4,7 +4,7 @@
 * _strpbrk - print matching characters
 * @s: The string
 * @accept: The characters that are matched against
-* Return: Pointer to first matching byte.
+* Return: Pointer to first matching byte, or NULL if none found.
 */
 char *_strpbrk(char *s, char *accept)
 {
@@ -19,5 +19,8 @@ char *_strpbrk(char *s, char *accept)
 		if (*(s + i) == *(accept + j))
 			break;
 	}
-	return ((s + i));
+	if (*(s + i) == *(accept + j))
+		return ((s + i));
+	else
+		return (0);
 }

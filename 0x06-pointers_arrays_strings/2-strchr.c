@@ -4,7 +4,7 @@
 * _strchr - locates the first instance of character c in string s.
 * @s: The string.
 * @c: The character to locate.
-* Return: pointer to the first instance of character c.
+* Return: pointer to the first instance of character c or NULL
 */
 char *_strchr(char *s, char c)
 {
@@ -13,5 +13,8 @@ char *_strchr(char *s, char c)
 	for (i = 0; i < _strlen(s); i++)
 		if (*(s + i) == c)
 			break;
-	return (s + i);
+	if (i == 0)
+		return (0);
+	else
+		return (s + i);
 }
