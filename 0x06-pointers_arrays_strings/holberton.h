@@ -61,4 +61,10 @@ void print_diagsums(int *a, int size);
 
 void set_string(char **s, char *to);
 
+int _abs(int n);
+
+int _isupper(int c);
+
+int _atoi(char *s);
+
 #endif /* HOLBERTON_H */

@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include "2-strlen.c"
+#include "strlen.c"
 /**
 * *_strcpy - copies the string pointed to by the source to the destination."
 * @dest: copying to.
