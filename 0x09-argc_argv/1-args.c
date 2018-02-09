@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
-* main - prints the name of the executable file.
+* main - prints the number of arguments in the command line.
 * @argc: Number of arguments.
 * @argv: Arguments.
 * Return: Always 0.
 */
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	printf("%d\n", argc - 1);
 	return (0);
 }
