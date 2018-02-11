@@ -37,9 +37,15 @@ int main(int argc, char *argv[])
 		cents = cents % 5;
 	}
 
-	if (cents < 5)
+	if (cents >= 2)
 	{
-		change += cents;
+		change += cents / 2;
+		cents = cents % 2;
+	}
+
+	if (cents == 1)
+	{
+		change += 1;
 	}
 
 	printf("%d\n", change);
