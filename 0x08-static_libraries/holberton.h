@@ -73,4 +73,6 @@ int _islower(int c);
 
 int _isalpha(int c);
 
+int _isdigit(int c);
+
 #endif /* HOLBERTON_H */
