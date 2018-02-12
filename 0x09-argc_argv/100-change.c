@@ -16,13 +16,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	if (argv[1] == 0)
-	{
-		printf("0\n");
-		return (0);
-	}
-
-	long long unsigned int cents = atoi(argv[1]);
+	int cents = atoi(argv[1]);
 	int change = 0;
 
 	if (cents >= 25)
