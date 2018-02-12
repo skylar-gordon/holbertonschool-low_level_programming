@@ -5,7 +5,7 @@
 * main - how many coins do I use to make change?
 * @argc: number of arguments.
 * @argv: arguments.
-* Return: 0 if giving 1 argument (in addition to running the exe), 1 upon error
+* Return: 0 if giving 1 argument (in addition to the file name), 1 upon error
 */
 
 int main(int argc, char *argv[])
@@ -16,7 +16,13 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int cents = atoi(argv[1]);
+	if (argv[1] == 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	long long unsigned int cents = atoi(argv[1]);
 	int change = 0;
 
 	if (cents >= 25)
