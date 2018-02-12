@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 /**
 * main - how many coins do I use to make change?
 * @argc: number of arguments.
