@@ -2,15 +2,25 @@
 #include "strlen.c"
 #include <stdlib.h>
 /**
-* 
+* string_nconcat - concatenates two strings, up to the nth point in string 2.
+* @s1: string added to.
+* @s2: string added.
+* @n: how many characters of s2 to add.
+* Return: pointer to new string upon success, NULL upon failure. 
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int howlong = _strlen(s1) + n;
-	char *newstring = (char *)malloc(howlong);
+	int howlong;
+	char *newstring;
 	int first;
 	unsigned int concat;
 
+	if (n < sizeof(s2))
+		howlong = _strlen(s1) + _strlen(s2);
+	else
+		howlong = _strlen(s1) + n;
+
+	newstring = (char *)malloc(howlong);
 	if (newstring == NULL)
 	{
 		free(newstring);
