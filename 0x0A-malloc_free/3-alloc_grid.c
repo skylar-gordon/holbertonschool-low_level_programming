@@ -9,12 +9,19 @@
 */
 int **alloc_grid(int width, int height)
 {
-	int size = sizeof(int) * width * height;
-	int **grid = (int **)malloc(size);
+	int **grid;
 	int i;
 	int j;
+	int g = 0;
 
-	if (size == 0 || grid == NULL)
+	grid = (int **)malloc(32 * width * height);
+	while (g < width)
+	{
+		grid[g] = (int *)malloc(sizeof(int) * height);
+		g++;
+	}
+
+	if (grid == NULL)
 	{
 		free(grid);
 		return (NULL);
