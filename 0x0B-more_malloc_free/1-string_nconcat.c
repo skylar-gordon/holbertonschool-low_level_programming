@@ -6,7 +6,7 @@
 * @s1: string added to.
 * @s2: string added.
 * @n: how many characters of s2 to add.
-* Return: pointer to new string upon success, NULL upon failure. 
+* Return: pointer to new string upon success, NULL upon failure.
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -31,5 +31,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (concat = 1; concat <= n; concat++)
 		newstring[_strlen(s1) + concat - 1] = s2[concat - 1];
 
-	return(newstring);
+	return (newstring);
 }
