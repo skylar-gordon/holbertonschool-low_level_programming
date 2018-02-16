@@ -15,10 +15,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int first;
 	unsigned int concat;
 
+	if (n <= 0)
+		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	if (n < sizeof(s2))
-		howlong = _strlen(s1) + _strlen(s2);
+		howlong = sizeof(s1) + sizeof(s2);
 	else
-		howlong = _strlen(s1) + n;
+		howlong = sizeof(s1) + n;
 
 	newstring = (char *)malloc(howlong);
 	if (newstring == NULL)
