@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	if (n < sizeof(s2))
+	if (n > sizeof(s2))
 		howlong = sizeof(s1) + sizeof(s2);
 	else
 		howlong = sizeof(s1) + n;
