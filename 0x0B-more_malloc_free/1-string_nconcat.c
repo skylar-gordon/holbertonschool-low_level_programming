@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include "strlen.c"
 #include <stdlib.h>
+#include <string.h>
 /**
 * string_nconcat - concatenates two strings, up to the nth point in string 2.
 * @s1: string added to.
@@ -10,10 +11,10 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int howlong;
+	int howfar;
 	char *newstring;
 	int first;
-	unsigned int concat;
+	int concat;
 
 	if (n <= 0)
 		return (NULL);
@@ -22,12 +23,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	if (n > sizeof(s2))
-		howlong = sizeof(s1) + sizeof(s2);
+	if (n >= strlen(s2))
+		howfar = _strlen(s2);
 	else
-		howlong = sizeof(s1) + n;
+		howfar = n;
 
-	newstring = (char *)malloc(howlong);
+	newstring = (char *)malloc(howfar + _strlen(s1));
 	if (newstring == NULL)
 	{
 		free(newstring);
@@ -35,8 +36,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (first = 0; first < _strlen(s1); first++)
 		newstring[first] = s1[first];
-	for (concat = 1; concat <= n; concat++)
-		newstring[_strlen(s1) + concat - 1] = s2[concat - 1];
+	for (concat = 0; concat < howfar ; concat++)
+		newstring[first + concat] = s2[concat];
 
 	return (newstring);
 }
