@@ -23,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	if (n >= strlen(s2))
+	if (n >= (unsigned int)_strlen(s2))
 		howfar = _strlen(s2);
 	else
 		howfar = n;
