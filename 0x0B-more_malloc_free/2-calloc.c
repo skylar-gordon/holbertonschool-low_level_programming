@@ -15,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb <= 0 || size <= 0)
 		return (NULL);
-	array = (unsigned int *)malloc(nmemb * size * sizeof(int *));
+	array = (unsigned int *)malloc(nmemb * size);
 	if (array == NULL)
 	{
 		free(array);
