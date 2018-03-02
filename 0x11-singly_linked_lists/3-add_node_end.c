@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "strlen.c"
 #include <string.h>
 #include <stdlib.h>
 
@@ -22,7 +23,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 
 	new_node->str = data;
-	new_node->len = strlen(data);
+	new_node->len = _strlen(data);
 	new_node->next = NULL;
 
 	if (*head == NULL)
